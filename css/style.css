@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+main {
+    flex: 1;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.login-card {
+    max-width: 450px;
+    margin: 2rem auto;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.btn-primary {
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+.btn-primary:hover {
+    background-color: #23272b;
+    border-color: #1d2124;
+}
+
+.table-responsive {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.input-group .form-control {
+    font-family: monospace;
+    font-size: 0.9rem;
+}

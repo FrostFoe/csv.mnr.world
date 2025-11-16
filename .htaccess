@@ -1,0 +1,20 @@
+# Disable directory browsing
+Options -Indexes
+
+# Deny access to sensitive files and directories
+RedirectMatch 403 ^/includes/.*$
+<Files .htaccess>
+    Require all denied
+</Files>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^includes/ - [F,L]
+</IfModule>
+
+# Fallback for servers without mod_rewrite
+<IfModule !mod_rewrite.c>
+    <Directory "includes">
+        Require all denied
+    </Directory>
+</IfModule>
